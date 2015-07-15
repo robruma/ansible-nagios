@@ -28,6 +28,9 @@
   # - python-passlib
   when: is_centos or is_amazon
 
+- name: Install passlib
+  pip: name=passlib
+
 - name: Install Nagios prerequisites for Debian
   apt: pkg={{ item }} state=present
   with_items:
@@ -52,8 +55,6 @@
    - openldap-devel
    - postgresql-devel
    - radiusclient-ng-devel
-   # - samba-client
-   # - libsmbclient
   when: is_centos or is_amazon
 
 - name: Install Plugin prerequisites for Debian
@@ -186,8 +187,3 @@
   shell: cd /etc/rc2.d && ln -s ../init.d/nagios S18nagios creates=/etc/rc2.d/S18nagios
   #file: src=/etc/init.d/nagios dest=/etc/rc2.d/S99nagios state=link owner=root group=root
   when: is_debian
-
-#- name: Check if SELinux is running in enforcing mode and change access
-  #file: path=/usr/local/nagios setype=httpd_sys_content_t state=directory recurse=yes
-  #when: ansible_selinux != False and ansible_selinux.mode == "enforcing"
-
