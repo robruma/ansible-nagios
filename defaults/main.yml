@@ -1,3 +1,10 @@
 ---
 apache: httpd
 apacheuser: apache
+nagiosurl: http://prdownloads.sourceforge.net/sourceforge/nagios/nagios-4.0.8.tar.gz
+nagiossrc: nagios-4.0.8
+pluginsurl: http://www.nagios-plugins.org/download/nagios-plugins-2.0.3.tar.gz
+pluginssrc: nagios-plugins-2.0.3
+nrpeurl: http://sourceforge.net/projects/nagios/files/nrpe-2.x/nrpe-2.15/nrpe-2.15.tar.gz
+nrpesrc: nrpe-2.15
+nagiosadminpass: Password1change
