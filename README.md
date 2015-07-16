@@ -22,7 +22,7 @@ Inspired by https://github.com/networklore/nelmon/tree/master/ansible/nagios-src
             - httpd24-devel
             - mod24_ssl
           apache_vhosts:
-            - { servername: "nagios.example.com", documentroot: "/var/www/nagios.example.com" }
+            - { servername: "nagios.example.com", documentroot: "/var/www/html", extra_parameters: "RedirectMatch ^/$ /nagios" }
           php_enable_php_fpm: true
           php_packages:
             - php56
