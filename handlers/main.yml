@@ -1,5 +1,5 @@
 ---
-# Nagios handlars
+# Nagios handlers
 - name: restart apache
   service: name={{ apache }} state=restarted
 
