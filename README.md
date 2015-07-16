@@ -1,4 +1,4 @@
-Ansible Wordpress
+Ansible Nagios
 --------
 
 Ansible Role that installs Nagios 4
